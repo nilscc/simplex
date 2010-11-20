@@ -1,0 +1,32 @@
+Name:                hmatrix-glpk-easy
+Version:             0.1
+License:             BSD3
+License-File:        LICENSE
+Author:              Nils Schweinsberg
+Maintainer:          mail@n-sch.de
+Category:            Math
+
+Synopsis:            Linear programming based on GLPK with easier syntax
+Description:         Easier interface to the hmatrix-glpk package.
+
+Homepage:            http://github.com/mcmaniac/simplex
+Build-Type:          Simple
+Cabal-Version:       >= 1.8
+
+Source-Repository head
+    type:       git
+    location:   http://github.com/mcmaniac/simplex
+
+Library
+
+    HS-Source-Dirs:         src
+    GHC-Options:            -Wall
+
+    Build-Depends:
+        base                == 4.*,
+        mtl                 == 2.*,
+        hmatrix             == 0.*,
+        hmatrix-glpk        == 0.2.*
+
+    Exposed-Modules:
+        Numeric.LinearProgramming.Easy
