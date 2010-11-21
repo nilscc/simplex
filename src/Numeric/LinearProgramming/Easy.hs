@@ -134,7 +134,7 @@ newVar = Simplex $ do
 
 -- | Create a list of @n@ new variables.
 newVars :: Int -> Simplex [SimplexVar]
-newVars i = mapM (const newVar) [1..i]
+newVars n = replicateM n newVar
 
 
 minimize :: SimplexExpr -> [SimplexConstraints] -> Simplex Solution
